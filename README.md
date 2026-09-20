@@ -40,12 +40,29 @@ Predicting real estate prices in Sri Lanka can be challenging due to wide variat
 - **Version Control & Hosting:** Git, GitHub, Streamlit Community Cloud
 
 ---
+## ⚠️ Limitations & Future Work
 
+- Prices are **asking prices** from online listings, not final sale prices.
+- Features exclude **floor area (sq ft)**, property age and condition, which strongly
+  influence price. Adding them is the most likely way to improve accuracy.
+- Location is categorical by suburb; finer location data (e.g., distance to city
+  centre) could help.
+- Filtering to 5M-150M LKR removes luxury and low-end properties, so predictions
+  outside this range are unreliable.
+- Future: compare with Random Forest / Linear Regression baselines, tune
+  hyperparameters, and use cross-validation.
+  
+---
 ## 🚀 Local Installation & Setup
 
 To run this project locally on your machine, follow these steps:
 
 1. **Clone the Repository:**
-   ```bash
-   git clone [https://github.com/kawshaninperera1112-source/Colombo-house-price-predictor.git](https://github.com/kawshaninperera1112-source/Colombo-house-price-predictor.git)
-   cd Colombo-house-price-predictor
+   ## 🚀 Local Installation & Setup
+
+```bash
+git clone https://github.com/kawshaninperera1112-source/Colombo-house-price-predictor.git
+cd Colombo-house-price-predictor
+pip install -r requirements.txt
+streamlit run app.py
+```
